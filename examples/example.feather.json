@@ -1,0 +1,16 @@
+{
+  "name": "hello!",
+  "identifier": "fyi.zxcvbn.repo.test",
+  "apps": [
+    {
+      "name": "app name",
+      "bundleIdentifier": "fyi.zxcvbn.app",
+      "subtitle": "just like the repo's caption",
+      "localizedDescription": "just like the repo's description",
+      "downloadURL": "https://example.com/path/to/some/app.ipa",
+      "iconURL": "https://example.com/hopefully/path/to/itunes/icon.png",
+      "version": "1.2",
+      "size": 1073741824
+    }
+  ]
+}

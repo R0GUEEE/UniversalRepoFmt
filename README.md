@@ -36,6 +36,8 @@ most (if not all) keys are technically optional. here's an example repo with eve
 }
 ```
 
+you can see the output for this example in the `examples/` directory.
+
 ## useful key explanations
 ### root
 `identifier` is usually a reverse id. this can really be anything, but i like the reverse domains.
