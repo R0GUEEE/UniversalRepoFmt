@@ -16,6 +16,7 @@ type AltStoreApp struct {
 	Description   string               `json:"localizedDescription"`
 	IconURL       string               `json:"iconURL"`
 	Versions      []AltStoreAppVersion `json:"versions"`
+	Permissions   UniversalPermissions `json:"appPermissions"`
 }
 
 type AltStore struct {

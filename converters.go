@@ -96,6 +96,10 @@ func ConvertToAltStore(uni *repos.Universal) *repos.AltStore {
 			IconURL:       orig.IconURL,
 		}
 
+		if permissions, ok := uni.Permissions[bundle]; ok {
+			app.Permissions = permissions
+		}
+
 		for _, idx := range idxs {
 			origIdx := uni.Apps[idx]
 			app.Versions = append(app.Versions, repos.AltStoreAppVersion{
@@ -134,4 +138,15 @@ func ConvertToScarlet(uni *repos.Universal) *repos.Scarlet {
 	}
 
 	return &r
+}
+
+// a convenience function that returns all formatted repos.
+func ConvertToAll(uni *repos.Universal) *repos.All {
+	return &repos.All{
+		ESign:    ConvertToESign(uni),
+		GBox:     ConvertToGBox(uni),
+		Feather:  ConvertToFeather(uni),
+		AltStore: ConvertToAltStore(uni),
+		Scarlet:  ConvertToScarlet(uni),
+	}
 }

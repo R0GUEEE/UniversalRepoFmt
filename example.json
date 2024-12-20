@@ -5,17 +5,31 @@
   "caption": "a *short* description of your repo!",
   "description": "this can be a longer description and include stuff like your links or something, idk",
   "apps": [
-      {
-          "name": "app name",
-          "developerName": "zx",
-          "bundleID": "fyi.zxcvbn.app",
-          "caption": "just like the repo's caption",
-          "description": "just like the repo's description",
-          "downloadURL": "https://example.com/path/to/some/app.ipa",
-          "iconURL": "https://example.com/hopefully/path/to/itunes/icon.png",
-          "version": "1.2",
-          "date": "2024-12-18",
-          "size": 1073741824
+    {
+      "name": "app name",
+      "developerName": "zx",
+      "bundleID": "fyi.zxcvbn.app",
+      "caption": "just like the repo's caption",
+      "description": "just like the repo's description",
+      "downloadURL": "https://example.com/path/to/some/app.ipa",
+      "iconURL": "https://example.com/hopefully/path/to/itunes/icon.png",
+      "version": "1.2",
+      "date": "2024-12-18",
+      "size": 1073741824
+    }
+  ],
+  "permissions": {
+    "fyi.zxcvbn.app": {
+      "entitlements": [
+        "aps-environment",
+        "com.apple.developer.associated-domains",
+        "keychain-access-groups",
+        "com.apple.security.application-groups"
+      ],
+      "privacy": {
+        "NSBluetoothAlwaysUsageDescription": "example",
+        "NSFaceIDUsageDescription": "for face id"
       }
-  ]
+    }
+  }
 }

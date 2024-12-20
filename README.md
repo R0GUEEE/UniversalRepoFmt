@@ -14,25 +14,39 @@ most (if not all) keys are technically optional. here's an example repo with eve
 
 ```json
 {
-    "name": "hello!",
-    "identifier": "fyi.zxcvbn.repo.test",
-    "iconURL": "https://example.com/path/to/some/icon.png",
-    "caption": "a *short* description of your repo!",
-    "description": "this can be a longer description and include stuff like your links or something, idk",
-    "apps": [
-        {
-            "name": "app name",
-            "developerName": "zx",
-            "bundleID": "fyi.zxcvbn.app",
-            "caption": "just like the repo's caption",
-            "description": "just like the repo's description",
-            "downloadURL": "https://example.com/path/to/some/app.ipa",
-            "iconURL": "https://example.com/hopefully/path/to/itunes/icon.png",
-            "version": "1.2",
-            "date": "2024-12-18",
-            "size": 1073741824
-        }
-    ]
+  "name": "hello!",
+  "identifier": "fyi.zxcvbn.repo.test",
+  "iconURL": "https://example.com/path/to/some/icon.png",
+  "caption": "a *short* description of your repo!",
+  "description": "this can be a longer description and include stuff like your links or something, idk",
+  "apps": [
+    {
+      "name": "app name",
+      "developerName": "zx",
+      "bundleID": "fyi.zxcvbn.app",
+      "caption": "just like the repo's caption",
+      "description": "just like the repo's description",
+      "downloadURL": "https://example.com/path/to/some/app.ipa",
+      "iconURL": "https://example.com/hopefully/path/to/itunes/icon.png",
+      "version": "1.2",
+      "date": "2024-12-18",
+      "size": 1073741824
+    }
+  ],
+  "permissions": {
+    "fyi.zxcvbn.app": {
+      "entitlements": [
+        "aps-environment",
+        "com.apple.developer.associated-domains",
+        "keychain-access-groups",
+        "com.apple.security.application-groups"
+      ],
+      "privacy": {
+        "NSBluetoothAlwaysUsageDescription": "example",
+        "NSFaceIDUsageDescription": "for face id"
+      }
+    }
+  }
 }
 ```
 
@@ -45,6 +59,8 @@ you can see the output for this example in the `examples/` directory.
 `caption` translates to the `subtitle` key in the AltStore and Feather outputs. it's the tiny text shown under the app name.
 
 `description` is the big text describing your repo. this is only shown in some apps so feel free to exclude it.
+
+`permissions` translates to the `appPermissions` key in the AltStore format. this is required according to my memory and [AltStore docs](https://faq.altstore.io/developers/make-a-source#apppermissions-app-permissions-object). if you're going to upload multiple versions of an app with the same bundle id, chances are their permissions are the same too, which is why `permissions` is a map of bundle ids to permissions.
 
 ### app
 `developerName` is only shown in some apps. exclude it if you want.

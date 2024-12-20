@@ -1,5 +1,10 @@
 package repos
 
+type UniversalPermissions struct {
+	Entitlements []string          `json:"entitlements"`
+	Privacy      map[string]string `json:"privacy"`
+}
+
 type UniversalApp struct {
 	Name          string `json:"name"`
 	DeveloperName string `json:"developerName"`
@@ -14,10 +19,11 @@ type UniversalApp struct {
 }
 
 type Universal struct {
-	Name        string         `json:"name"`
-	Identifier  string         `json:"identifier"`
-	IconURL     string         `json:"iconURL"`
-	Caption     string         `json:"caption"`
-	Description string         `json:"description"`
-	Apps        []UniversalApp `json:"apps"`
+	Name        string                          `json:"name"`
+	Identifier  string                          `json:"identifier"`
+	IconURL     string                          `json:"iconURL"`
+	Caption     string                          `json:"caption"`
+	Description string                          `json:"description"`
+	Apps        []UniversalApp                  `json:"apps"`
+	Permissions map[string]UniversalPermissions `json:"permissions"`
 }
