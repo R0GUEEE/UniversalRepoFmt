@@ -56,7 +56,7 @@ you can see the output for this example in the `examples/` directory.
 ### root
 `identifier` is usually a reverse id. this can really be anything, but i like the reverse domains.
 
-`caption` translates to the `subtitle` key in the AltStore and Feather outputs. it's the tiny text shown under the app name.
+`caption` translates to the `subtitle` key in the AltStore and Feather outputs. it's the tiny text shown under the repo name.
 
 `description` is the big text describing your repo. this is only shown in some apps so feel free to exclude it.
 
