@@ -1,9 +1,9 @@
 # UniversalRepoFmt
 a universal IPA repo format that automatically converts into nearly every major format! it converts into formats for the following apps:
 
-- AltStore (incl. SideStore, altsource-viewer, and derivatives)
+- AltStore (incl. SideStore, TrollApps, altsource-viewer, and derivatives)
 - ESign (can usually be used in most places)
-- Feather (incl. TrollApps)
+- Feather
 - GBox
 - Scarlet
 

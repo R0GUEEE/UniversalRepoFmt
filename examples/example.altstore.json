@@ -1,5 +1,6 @@
 {
   "name": "hello!",
+  "iconURL": "https://example.com/path/to/some/icon.png",
   "subtitle": "a *short* description of your repo!",
   "description": "this can be a longer description and include stuff like your links or something, idk",
   "apps": [

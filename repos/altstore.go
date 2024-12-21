@@ -21,6 +21,7 @@ type AltStoreApp struct {
 
 type AltStore struct {
 	Name        string        `json:"name"`
+	IconURL     string        `json:"iconURL"`
 	Caption     string        `json:"subtitle,omitempty"`
 	Description string        `json:"description"`
 	Apps        []AltStoreApp `json:"apps"`

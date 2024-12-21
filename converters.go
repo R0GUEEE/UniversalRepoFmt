@@ -72,6 +72,7 @@ func ConvertToFeather(uni *repos.Universal) *repos.Feather {
 func ConvertToAltStore(uni *repos.Universal) *repos.AltStore {
 	r := repos.AltStore{
 		Name:        uni.Name,
+		IconURL:     uni.IconURL,
 		Caption:     uni.Caption,
 		Description: uni.Description,
 	}
