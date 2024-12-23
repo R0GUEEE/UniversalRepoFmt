@@ -60,7 +60,7 @@ you can see the output for this example in the `examples/` directory.
 
 `description` is the big text describing your repo. this is only shown in some apps so feel free to exclude it.
 
-`permissions` translates to the `appPermissions` key in the AltStore format. this is required according to my memory and [AltStore docs](https://faq.altstore.io/developers/make-a-source#apppermissions-app-permissions-object). if you're going to upload multiple versions of an app with the same bundle id, chances are their permissions are the same too, which is why `permissions` is a map of bundle ids to permissions.
+`permissions` translates to the `appPermissions` key in the AltStore format. this is required according to my memory and [AltStore docs](https://faq.altstore.io/developers/make-a-source#apppermissions-app-permissions-object). if you're going to upload multiple versions of an app with the same bundle id, chances are their permissions are the same too, which is why `permissions` is a map of bundle ids to permissions. by the way, this wont be shown in sidestore, due to a different format. rip (i dont feel like implementing  that)
 
 ### app
 `developerName` is only shown in some apps. exclude it if you want.

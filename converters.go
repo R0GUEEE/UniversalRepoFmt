@@ -72,7 +72,7 @@ func ConvertToFeather(uni *repos.Universal) *repos.Feather {
 func ConvertToAltStore(uni *repos.Universal) *repos.AltStore {
 	r := repos.AltStore{
 		Name:        uni.Name,
-		Identifier:  uni.Identifier,
+		Identifier:  uni.Identifier, // sidestore moment 1
 		IconURL:     uni.IconURL,
 		Caption:     uni.Caption,
 		Description: uni.Description,
@@ -98,6 +98,7 @@ func ConvertToAltStore(uni *repos.Universal) *repos.AltStore {
 			IconURL:       orig.IconURL,
 		}
 
+		// this wont be used for sidestore
 		if permissions, ok := uni.Permissions[bundle]; ok {
 			app.Permissions = permissions
 		}
@@ -113,6 +114,7 @@ func ConvertToAltStore(uni *repos.Universal) *repos.AltStore {
 			})
 		}
 
+		app.DownloadURL = app.Versions[0].DownloadURL // real sidestore moment 2
 		r.Apps = append(r.Apps, app)
 	}
 
