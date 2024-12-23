@@ -16,11 +16,12 @@ type AltStoreApp struct {
 	Description   string               `json:"localizedDescription"`
 	IconURL       string               `json:"iconURL"`
 	Versions      []AltStoreAppVersion `json:"versions"`
-	Permissions   UniversalPermissions `json:"appPermissions"`
+	Permissions   UniversalPermissions `json:"appPermissions"` // sidestore has a different permissions format, but it's OK cause it's optional
 }
 
 type AltStore struct {
 	Name        string        `json:"name"`
+	Identifier  string        `json:"identifier"` // required for sidestore
 	IconURL     string        `json:"iconURL"`
 	Caption     string        `json:"subtitle,omitempty"`
 	Description string        `json:"description"`
