@@ -81,12 +81,7 @@ func ConvertToAltStore(uni *repos.Universal) *repos.AltStore {
 	// step 1: find indexes of all apps with same bundle id
 	bundleIdIdxs := make(map[string][]int, len(uni.Apps))
 	for idx, app := range uni.Apps {
-		_, ok := bundleIdIdxs[app.BundleID]
-		if !ok {
-			bundleIdIdxs[app.BundleID] = []int{idx}
-		} else {
-			bundleIdIdxs[app.BundleID] = append(bundleIdIdxs[app.BundleID], idx)
-		}
+		bundleIdIdxs[app.BundleID] = append(bundleIdIdxs[app.BundleID], idx)
 	}
 
 	for bundle, idxs := range bundleIdIdxs {
@@ -114,7 +109,6 @@ func ConvertToAltStore(uni *repos.Universal) *repos.AltStore {
 			})
 		}
 
-		app.DownloadURL = app.Versions[0].DownloadURL // real sidestore moment 2
 		r.Apps = append(r.Apps, app)
 	}
 

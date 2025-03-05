@@ -15,7 +15,6 @@ type AltStoreApp struct {
 	Caption       string               `json:"subtitle,omitempty"`
 	Description   string               `json:"localizedDescription"`
 	IconURL       string               `json:"iconURL"`
-	DownloadURL   string               `json:"downloadURL"` // required for sidestore here, for some reason
 	Versions      []AltStoreAppVersion `json:"versions"`
 	Permissions   UniversalPermissions `json:"appPermissions"` // sidestore has a different permissions format, but it's OK cause it's optional
 }
