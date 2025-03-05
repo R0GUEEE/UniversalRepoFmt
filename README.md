@@ -69,7 +69,7 @@ you can see the output for this example in the `examples/` directory.
 
 `caption` and `description` basically have the same purpose as their root counterparts.
 
-`date` is the date which this ipa was uploaded. this key isnt required, but can be helpful, especially in some apps like gbox. the most common date format is `2024-12-18`, however this doesn't work in gbox. gbox uses the format `2024-12-18T00:00:00+0800`. you can pick either.
+`date` is the date which this ipa was uploaded. this key isnt required, but can be helpful, especially in some apps like gbox. the most common date format is `2024-12-18`, ~~however this doesn't work in gbox. gbox uses the format `2024-12-18T00:00:00+0800`. you can pick either.~~ and as of v1.0.3, it should now work fine in gbox too.
 
 ## usage
 ### as a cli tool

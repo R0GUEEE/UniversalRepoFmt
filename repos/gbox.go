@@ -2,7 +2,7 @@ package repos
 
 type GBoxApp struct {
 	Type        string `json:"appType"`
-	Date        string `json:"appUpdateTime"`
+	Date        string `json:"versionDate"` // changing from "appUpdateTime" so it shows updated time correctly with yyyy-mm-dd date format (common)
 	Name        string `json:"appName"`
 	Version     string `json:"appVersion"`
 	Description string `json:"appDescription"`
